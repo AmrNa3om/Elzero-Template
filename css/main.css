@@ -694,9 +694,9 @@ header .container .header-content .links > ul li:hover a{
 .features .container .features-content .featureCards .feature .button::before{
     content: '';
     position: absolute;
-    width: 100%;
+    width: calc(100% + 1px);
     height: 104%;
-    left: calc(-100% - 2px);
+    left: calc(-100% - 3px);
     top: -1px;
     background-color: white;
     z-index: 2;
@@ -705,9 +705,9 @@ header .container .header-content .links > ul li:hover a{
 .features .container .features-content .featureCards .feature .button::after{
     content: '';
     position: absolute;
-    width: 100%;
+    width: calc(100% + 1px);
     height: 100%;
-    left: calc(-100% - 2px);
+    left: calc(-100% - 3px);
     top: 0;
     z-index: -1;
     transition: 0.5s;
