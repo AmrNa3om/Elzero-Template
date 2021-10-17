@@ -163,6 +163,7 @@ header .container .header-content .links > ul{
     justify-content: center;
     align-items: center;
     padding-left: 0;
+    margin: 16px 0;
 }
 
 header .container .header-content .links > ul > li > a{
