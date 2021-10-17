@@ -21,7 +21,7 @@ html{
     text-align: center;
     border: 2px solid black;
     padding: 10px 26px;
-    width: 140px;
+    width: 200px;
     text-transform: uppercase;
     margin: 0 auto 80px;
     z-index: 2;
@@ -142,6 +142,7 @@ body{
 /* Start Header */
 header{
     background-color: white;
+    min-height: 50px;
 }
 
 header .container .header-content{
@@ -756,8 +757,108 @@ header .container .header-content .links > ul li:hover a{
 }
 /* End Features Section */
 
-/* Start Video Section */
-/* End Video Section */
+/* Start Testmonials Section */
+.testmonials{
+    background-color: var(--sectionColor);
+    position: relative;
+    padding: 100px 0;
+}
+
+.testmonials::before{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(45deg, var(--sectionColor) 25%, transparent 25%),
+                      linear-gradient(315deg, var(--sectionColor) 25%, transparent 25%);
+    background-size: 20px 100%;
+    height: 20px;
+    top: -20px;
+    left: 0;
+    right: 0;
+}
+
+.testmonials .container .testmonials-content .testmons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.testmonials .container .testmonials-content .testmons .testmon{
+    flex-basis: 300px;
+    background-color: white;
+    position: relative;
+    padding: 10px;
+    box-shadow: 0 0 4px 1px #afafaf;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.testmonials .container .testmonials-content .testmons .testmon .image{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: -25px;
+    right: -10px;
+    background-color: var(--sectionColor);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.testmonials .container .testmonials-content .testmons .testmon .image img{
+    margin: 8% 0 0 8%;
+    width: 84%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.testmonials .container .testmonials-content .testmons .testmon .head h3{
+    margin: 15px 5px 5px 15px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.testmonials .container .testmonials-content .testmons .testmon .head p{
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 5px 5px 15px;
+    color: rgb(104, 104, 104);
+}
+
+.testmonials .container .testmonials-content .testmons .testmon .details p{
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 5px 5px 15px;
+    color: rgb(131, 131, 131);
+}
+
+.testmonials .container .testmonials-content .testmons .testmon .stars{
+    margin: 5px 5px 5px 15px;
+}
+
+.testmonials .container .testmonials-content .testmons .testmon .stars i:not(:last-child),
+.testmonials .container .testmonials-content .testmons .testmon:last-child .stars i:nth-child(5){
+    color: gold;
+    font-size: 15px;
+}
+
+.testmonials .container .testmonials-content .testmons .testmon:nth-child(2) .stars i:nth-child(4),
+.testmonials .container .testmonials-content .testmons .testmon:nth-child(4) .stars i:nth-child(4){
+    color: black;
+    font-size: 15px;
+}
+
+
+/* End Testmonials Section */
 
 /* Start About Section */
 /* End About Section */
