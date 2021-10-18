@@ -21,10 +21,18 @@ html{
     text-align: center;
     border: 2px solid black;
     padding: 10px 26px;
-    width: 200px;
+    width: fit-content;
     text-transform: uppercase;
     margin: 0 auto 80px;
     z-index: 2;
+}
+
+.special-width{
+    width: 210px;
+}
+
+.special-width-2{
+    width: 140px;
 }
 
 .special-heading:hover{
@@ -856,12 +864,101 @@ header .container .header-content .links > ul li:hover a{
     color: black;
     font-size: 15px;
 }
-
-
 /* End Testmonials Section */
 
-/* Start About Section */
-/* End About Section */
+/* Start Team Members Section */
+.teammembers{
+    padding: 100px 0;
+}
+
+.teammembers .container .teammembers-content .teams{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.teammembers .container .teammembers-content .teams .member{
+    flex-basis: 250px;
+    height: 350px;
+    background-color: rgb(233, 233, 233);
+    position: relative;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+.teammembers .container .teammembers-content .teams .member:hover{
+    animation-name: box-shadow;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+.teammembers .container .teammembers-content .teams .member:hover .image img{
+    filter: grayscale(1);
+    -webkit-filter: grayscale(0.8);
+}
+
+.teammembers .container .teammembers-content .teams .member:hover .text h3{
+    color: #343434;
+}
+
+.teammembers .container .teammembers-content .teams .member .image div{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 15px;
+    top: 25%;
+}
+
+.teammembers .container .teammembers-content .teams .member .image div i{
+    margin-bottom: 20px;
+    color: #525252;
+}
+
+.teammembers .container .teammembers-content .teams .member .image img{
+    position: absolute;
+    width: 90%;
+    top: 30px;
+    right: 20%;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
+
+.teammembers .container .teammembers-content .teams .member .text{
+    position: absolute;
+    bottom: 10px;
+    padding-left: 15px;
+}
+
+.teammembers .container .teammembers-content .teams .member .text h3{
+    margin: 10px 0 5px;
+    color: var(--mainColor);
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
+
+.teammembers .container .teammembers-content .teams .member .text p{
+    margin: 10px 0;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+/* End Team Members Section */
 
 /* Start Numbers Section */
 /* End Numbers Section */
@@ -1041,6 +1138,12 @@ header .container .header-content .links > ul li:hover a{
         -moz-transform: translateX(7px);
         -ms-transform: translateX(7px);
         -o-transform: translateX(7px);
+    }
+}
+
+@keyframes box-shadow{
+    100%{
+        box-shadow: inset -6px 0px 0px 100px #c3c3c3;
     }
 }
 /* End Animation */
