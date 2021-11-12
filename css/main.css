@@ -108,6 +108,7 @@ html{
 
 body{
     font-family: var(--cairoFont);
+    counter-reset: nums; 
 }
 
 ::selection{
@@ -960,8 +961,131 @@ header .container .header-content .links > ul li:hover a{
 }
 /* End Team Members Section */
 
-/* Start Numbers Section */
-/* End Numbers Section */
+/* Start services Section */
+.services{
+    background-color: var(--sectionColor);
+    position: relative;
+    padding: 100px 0;
+}
+
+.services::before{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(45deg, var(--sectionColor) 25%, transparent 25%),
+                      linear-gradient(315deg, var(--sectionColor) 25%, transparent 25%);
+    background-size: 20px 100%;
+    height: 20px;
+    top: -20px;
+    left: 0;
+    right: 0;
+}
+
+.services .container .serv-content .srvs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.services .container .serv-content .srvs .serv{
+    flex-basis: 300px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 10px 2px #b9b9b9;
+    position: relative;
+}
+
+.services .container .serv-content .srvs .serv::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: var(--mainColor);
+    top: 0;
+    right: 0;
+    transform-origin: center;
+    transform: rotatey(90deg);
+    -webkit-transform: rotatey(90deg);
+    -moz-transform: rotatey(90deg);
+    -ms-transform: rotatey(90deg);
+    -o-transform: rotatey(90deg);
+}
+
+.services .container .serv-content .srvs .serv:hover::before{
+    animation-name: borderFill;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+}
+
+.services .container .serv-content .srvs .serv:hover{
+    animation-name: translateUp;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.services .container .serv-content .srvs .serv .sec-1{
+    padding: 40px 0;
+}
+
+.services .container .serv-content .srvs .serv .sec-1 i{
+    font-size: 50px;
+    color: rgb(218, 216, 216);
+}
+
+.services .container .serv-content .srvs .serv .sec-1 h3{
+    color: var(--mainColor);
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.services .container .serv-content .srvs .serv .sec-2{
+    background-color: rgb(237, 237, 237);
+    /* padding: 15px; */
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+}
+
+.services .container .serv-content .srvs .serv .sec-2 .count-section{
+    background-color: var(--mainColor);
+    width: 25%;
+    padding: 2px;
+    position: relative;
+}
+
+.services .container .serv-content .srvs .serv .sec-2 .count-section::before{
+    counter-increment: nums;
+    content: '0' counter(nums);
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.services .container .serv-content .srvs .serv .sec-2 .count-section::after{
+    content: '';
+    position: absolute;
+    background-color: rgb(200, 200, 200);
+    top: 0;
+    right: -10px;
+    width: 37%;
+    height: 100%;
+    transform-origin: bottom;
+    transform: skew(340deg);
+    -webkit-transform: skew(340deg);
+    -moz-transform: skew(340deg);
+    -ms-transform: skew(340deg);
+    -o-transform: skew(340deg);
+}
+
+.services .container .serv-content .srvs .serv .sec-2 .details{
+    margin: 10px;
+    text-transform: capitalize;
+    font-size: 13px;
+    color: var(--mainColor);
+}
+/* End services Section */
 
 /* Start Skills Section */
 /* End Skills Section */
@@ -1145,5 +1269,26 @@ header .container .header-content .links > ul li:hover a{
     100%{
         box-shadow: inset -6px 0px 0px 100px #c3c3c3;
     }
+}
+
+@keyframes translateUp{
+    100%{
+        transform: translatey(-10px);
+        -webkit-transform: translatey(-10px);
+        -moz-transform: translatey(-10px);
+        -ms-transform: translatey(-10px);
+        -o-transform: translatey(-10px);
+    }
+}
+
+@keyframes borderFill{
+    100%{
+        transform-origin: center;
+        transform: rotatey(0deg);
+        -webkit-transform: rotatey(0deg);
+        -moz-transform: rotatey(0deg);
+        -ms-transform: rotatey(0deg);
+        -o-transform: rotatey(0deg);
+}
 }
 /* End Animation */
