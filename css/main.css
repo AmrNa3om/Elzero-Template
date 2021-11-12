@@ -1246,6 +1246,16 @@ header .container .header-content .links > ul li:hover a{
 .skills .container .skills-content .skill-content .bars .bar:nth-child(3) .sub-bar{
     width: 70%;
 }
+
+@media (max-width:767px){
+    .skills .container .skills-content .skill-content img{
+        display: none;
+    }
+
+    .skills .container .skills-content .skill-content .bars{
+        width: 55%;
+    }
+}
 /* End Skills Section */
 
 /* Start Qoute Section */
