@@ -1088,6 +1088,164 @@ header .container .header-content .links > ul li:hover a{
 /* End services Section */
 
 /* Start Skills Section */
+.skills{
+    padding: 100px 0;
+}
+
+.skills .container .skills-content .skill-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.skills .container .skills-content .skill-content .bars{
+    width: 40%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.skills .container .skills-content .skill-content .bars .bar{
+    position: relative;
+    width: 100%;
+    height: 8%;
+    background-color: rgb(228, 228, 228);
+}
+
+.skills .container .skills-content .skill-content .bars .bar:first-child::before{
+    content: 'html';
+    position: absolute;
+    text-transform: uppercase;
+    top: -30px;
+    left: 0;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.skills .container .skills-content .skill-content .bars .bar:nth-child(2)::before{
+    content: 'css';
+    position: absolute;
+    text-transform: uppercase;
+    top: -30px;
+    left: 0;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.skills .container .skills-content .skill-content .bars .bar:nth-child(3)::before{
+    content: 'java script';
+    position: absolute;
+    text-transform: capitalize;
+    top: -30px;
+    left: 0;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.skills .container .skills-content .skill-content .bars .bar:last-child::before{
+    content: 'python';
+    position: absolute;
+    text-transform: capitalize;
+    top: -30px;
+    left: 0;
+    font-size: 15px;
+    font-weight: 800;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.skills .container .skills-content .skill-content .bars .bar:first-child::after{
+    content: '80%';
+    position: absolute;
+    text-transform: uppercase;
+    top: -35px;
+    right: 0;
+    border: 1px solid rgb(192, 192, 192);
+    padding: 5px;
+    font-size: 12px;
+    color: var(--mainColor);
+    font-weight: 700;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.skills .container .skills-content .skill-content .bars .bar:nth-child(2)::after{
+    content: '85%';
+    position: absolute;
+    text-transform: uppercase;
+    top: -35px;
+    right: 0;
+    border: 1px solid rgb(192, 192, 192);
+    padding: 5px;
+    font-size: 12px;
+    color: var(--mainColor);
+    font-weight: 700;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.skills .container .skills-content .skill-content .bars .bar:nth-child(3)::after{
+    content: '70%';
+    position: absolute;
+    text-transform: capitalize;
+    top: -35px;
+    right: 0;
+    border: 1px solid rgb(192, 192, 192);
+    padding: 5px;
+    font-size: 12px;
+    color: var(--mainColor);
+    font-weight: 700;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.skills .container .skills-content .skill-content .bars .bar:last-child::after{
+    content: '80%';
+    position: absolute;
+    text-transform: capitalize;
+    top: -35px;
+    right: 0;
+    border: 1px solid rgb(192, 192, 192);
+    padding: 5px;
+    font-size: 12px;
+    color: var(--mainColor);
+    font-weight: 700;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.skills .container .skills-content .skill-content .bars .bar .sub-bar{
+    width: 80%;
+    height: 100%;
+    background-color: var(--mainColor);
+}
+
+.skills .container .skills-content .skill-content .bars .bar:nth-child(2) .sub-bar{
+    width: 85%;
+}
+
+.skills .container .skills-content .skill-content .bars .bar:nth-child(3) .sub-bar{
+    width: 70%;
+}
 /* End Skills Section */
 
 /* Start Qoute Section */
