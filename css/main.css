@@ -1477,6 +1477,11 @@ header .container .header-content .links > ul li:hover a{
 
 .events .container .events-content .subscribe input::placeholder{
     font-size: 13px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
 }
 
 .events .container .events-content .subscribe input:focus::placeholder{
@@ -1589,11 +1594,12 @@ header .container .header-content .links > ul li:hover a{
     font-weight: 700;
     position: absolute;
     top: 0;
-    right: -115px;
-    width: 110px;
-    height: 0;
-    border: calc(36px / 2) solid;
-    border-color: var(--mainColor) transparent var(--mainColor) var(--mainColor);
+    right: -135px;
+    height: 28px;
+    width: 160px;
+    background-color: var(--mainColor);
+    text-align: center;
+    padding-top: 8px;
     transform-origin: top left;
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
@@ -1601,6 +1607,22 @@ header .container .header-content .links > ul li:hover a{
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     z-index: 2;
+}
+
+.pricing .pricing-content .plan:nth-child(2)::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 123px;
+    right: 23px;
+    border: 20px solid;
+    border-color: transparent transparent white;
+    z-index: 2;
+}
+
+.pricing .pricing-content .plan:hover:nth-child(2)::after{
+    border-color: transparent transparent #eeeeee;
 }
 
 .pricing .pricing-content .plan .sec-1 h3{
@@ -1714,6 +1736,16 @@ header .container .header-content .links > ul li:hover a{
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
+
+.pricing .pricing-content .plan .planBtn:hover{
+    background-color: var(--mainColor);
+    color: white;
 }
 
 @media (max-width:991px){
@@ -1727,10 +1759,462 @@ header .container .header-content .links > ul li:hover a{
 }
 /* End pricing Section */
 
-/* Start Contact Section */
-/* End Contact Section */
+/* Start Top Videos Section */
+.topvideo{
+    padding: 100px 0;
+}
+.topvideo .container .videos-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    flex-wrap: wrap;
+}
+
+.topvideo .container .videos-content > .video{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e2e2e2;
+    padding: 10px;
+    height: 100%;
+}
+
+.topvideo .container .videos-content > .video img{
+    max-height: 400px;
+}
+
+.topvideo .container .videos-content > .video div:last-child{
+    background-color: white;
+    width: 100%;
+    padding: 15px;
+    text-transform: capitalize;
+    font-size: 13px;
+}
+
+.topvideo .container .videos-content .video-list{
+    background-color: #f0f0f0;
+    height: 100%;
+}
+
+.topvideo .container .videos-content .video-list .videos .heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: var(--mainColor);
+    font-size: 14px;
+}
+
+.topvideo .container .videos-content .video-list .videos .video{
+    background: white;
+    margin: 2px;
+    padding: 12px;
+    text-transform: capitalize;
+}
+
+.topvideo .container .videos-content .video-list .videos .video h3{
+    font-size: 14px;
+    margin: 0 0 10px;
+    color: #585858;
+    font-weight: 700;
+}
+
+.topvideo .container .videos-content .video-list .videos .video p{
+    font-size: 14px;
+    margin: 0;
+    color: #969696;
+}
+
+@media (max-width:991px){
+    .topvideo .container .videos-content .video-list,
+    .topvideo .container .videos-content > .video{
+        width: 100%;
+    }
+    
+    .topvideo .container .videos-content > .video img{
+        width: 100%;
+        margin-bottom: 20px;
+        max-height: 100%;
+    }
+
+    .topvideo .container .videos-content > .video{
+        justify-content: flex-start;
+        height: fit-content;
+    }
+
+    .topvideo .container .videos-content{
+        height: fit-content;
+    }
+}
+/* End Top Videos Section */
+
+/* Start Stats Section */
+.stats{
+    background-image: url("../imgs/statsBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 0 50px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.stats::before{
+    content: '';
+    position: absolute;
+    background-color: #e7e7e791;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.stats .stats-content .statsDivs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.stats .stats-content .heading{
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.stats .stats-content .statsDivs .stat{
+    background-color: white;
+    padding: 15px;
+    flex-basis: 190px;
+    position: relative;
+}
+
+.stats .stats-content .statsDivs .stat::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--mainColor);
+    transform-origin: bottom right;
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+}
+
+.stats .stats-content .statsDivs .stat::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--mainColor);
+    transform-origin: top left;
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+}
+
+.stats .stats-content .statsDivs .stat:hover:after{
+    animation-name: statsBorderLeft;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.stats .stats-content .statsDivs .stat:hover:before{
+    animation-name: statsBorderRight;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.stats .stats-content .statsDivs .stat i{
+    font-size: 25px;
+}
+
+.stats .stats-content .statsDivs .stat p:first-of-type{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 10px 0 5px 0;
+}
+
+.stats .stats-content .statsDivs .stat p:last-of-type{
+    margin: 0 0 15px 0;
+    font-style: italic;
+    color: var(--mainColor);
+}
+/* End Stats Section */
+
+/* Start Discount Section */
+.discount  .main-container{
+    display: flex;
+}
+
+.discount  .main-container .sec-1{
+    position: relative;
+    flex-basis: 50%;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    animation-name: changeBackground;
+    animation-fill-mode: forwards;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: -1;
+}
+
+.discount  .main-container .sec-1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0077ffc4;
+    z-index: -1;
+}
+
+.discount  .main-container .sec-1 h3{
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.discount  .main-container .sec-1 p{
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 50px;
+}
+
+.discount  .main-container .sec-2{
+    flex-basis: 50%;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.discount  .main-container .sec-2 h3{
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.discount  .main-container .sec-2 form input{
+    width: 220px;
+    margin-bottom: 20px;
+    height: 37px;
+    border-width: 0 0 2px;
+    border-color: #dddddd;
+    border-style: solid;
+    background-color: #f3f3f3;
+    padding: 10px;
+}
+
+.discount  .main-container .sec-2 form input:focus,
+.discount  .main-container .sec-2 form textarea:focus{
+    outline: none;
+}
+
+.discount  .main-container .sec-2 form textarea{
+    width: 220px;
+    border-width: 0 0 2px;
+    border-color: #dddddd;
+    border-style: solid;
+    background-color: #f3f3f3;
+    padding: 10px;
+}
+
+.discount  .main-container .sec-2 form button{
+    width: 220px;
+    background-color: var(--mainColor);
+    border: 0;
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 15px 0 0 0;
+}
+
+.discount  .main-container .sec-2 form input::placeholder,
+.discount  .main-container .sec-2 form textarea::placeholder{
+    font-size: 13px;
+}
+
+@media (max-width:767px){
+    .discount  .main-container .sec-1,
+    .discount  .main-container .sec-2{
+        flex-basis: 100%;
+    }
+
+    .discount  .main-container{
+        flex-wrap: wrap;
+    }
+}
+
+/* End Discount Section */
 
 /* Start Footer Section */
+
+footer{
+    background-color: #141414;
+    color: #a5a5a5;
+}
+
+footer .container .footer-content .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 0;
+}
+
+footer .container .footer-content .footer .social .logo{
+    text-transform: capitalize;
+    font-size: 30px;
+    color: white;
+    margin: 0 0 15px;
+}
+
+footer .container .footer-content .footer .social .icons i{
+    padding: 10px;
+    margin-right: 3px;
+    background-color: #313131;
+}
+
+footer .container .footer-content .footer .social .icons i:first-child{
+    padding: 10px 13px;
+    margin-right: 5px;
+}
+
+footer .container .footer-content .footer .social .icons i:first-child:hover{
+    background-color: #3b5998;
+    color: white;
+}
+footer .container .footer-content .footer .social .icons i:nth-child(2):hover{
+    background-color: #00acee;
+    color: white;
+    
+}
+footer .container .footer-content .footer .social .icons i:last-child:hover{
+    background-color: #c4302b;
+    color: white;
+}
+
+footer .container .footer-content .footer .social p{
+    line-height: 1.6;
+    font-size: 13px;
+    max-width: 300px;
+}
+
+footer .container .footer-content .footer .links ul{
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+}
+
+footer .container .footer-content .footer .links ul li{
+    padding: 5px 0 10px;
+}
+
+footer .container .footer-content .footer .links ul li:not(:first-of-type){
+    border-top: 1px solid #313131;
+}
+
+footer .container .footer-content .footer .links ul li a{
+    text-decoration: none;
+    color: #a5a5a5;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+footer .container .footer-content .footer .links ul li a::before{
+    content: "\00BB \0020";
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--mainColor);
+    margin-right: 5px;
+}
+
+footer .container .footer-content .footer .contact > div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+footer .container .footer-content .footer .contact > div i{
+    font-size: 18px;
+    color: var(--mainColor);
+    margin-right: 10px;
+}
+
+footer .container .footer-content .footer .contact p{
+    font-style: italic;
+    text-transform: capitalize;
+    line-height: 1.6;
+    margin: 0;
+}
+
+footer .container .footer-content .footer .contact > div{
+    margin: 15px 0;
+}
+
+footer .container .footer-content .footer > div{
+    flex-basis: 200px;
+}
+
+footer .container .footer-content .footer .shortcut .images{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(55px, 1fr));
+    gap: 5px;
+}
+
+footer .container .footer-content .footer .shortcut .images img{
+    border: 2px solid white;
+}
+
+footer .endFooter{
+    color: white;
+    text-transform: capitalize;
+    margin: 0;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #353535;
+    font-size: 13px;
+}
+
+@media (max-width:767px){
+    footer .container .footer-content .footer{
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer .container .footer-content .footer > div{
+        flex-basis: 100px;
+    }
+
+    footer .container .footer-content .footer .shortcut .images{
+        display: flex;
+        max-width: 50%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer .container .footer-content .footer .shortcut .images img{
+        width: 100px;
+    }
+}
 /* End Footer Section */
 
 /* Start Animation */
@@ -1949,5 +2433,54 @@ header .container .header-content .links > ul li:hover a{
         -ms-transform: rotateY(0deg);
         -o-transform: rotateY(0deg);
 }
+}
+
+@keyframes statsBorderLeft{
+    100%{
+        transform-origin: top left;
+        transform: rotateX(0deg);
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        -ms-transform: rotateX(0deg);
+        -o-transform: rotateX(0deg);
+}
+}
+
+@keyframes statsBorderRight{
+    100%{
+        transform-origin: bottom right;
+        transform: rotateX(0deg);
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        -ms-transform: rotateX(0deg);
+        -o-transform: rotateX(0deg);
+}
+}
+
+@keyframes changeBackground{
+    0%{
+        background-image: url("../imgs/discount-background5.jpg");
+        background-size: cover;
+    }
+    20%{
+        background-image: url("../imgs/statsBackground.jpg");
+        background-size: cover;
+    }
+    40%{
+        background-image: url("../imgs/discount-background2.jpg");
+        background-size: cover;
+    }
+    60%{
+        background-image: url("../imgs/discount-background3.jpg");
+        background-size: cover;
+    }
+    80%{
+        background-image: url("../imgs/discount-background4.jpg");
+        background-size: cover;
+    }
+    100%{
+        background-image: url("../imgs/discount-background5.jpg");
+        background-size: cover;
+    }
 }
 /* End Animation */
