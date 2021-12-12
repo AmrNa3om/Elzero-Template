@@ -2057,6 +2057,9 @@ header .container .header-content .links > ul li:hover a{
     .discount  .main-container{
         flex-wrap: wrap;
     }
+    .discount  .main-container .sec-1{
+        animation-play-state: paused;
+    }
 }
 
 /* End Discount Section */
